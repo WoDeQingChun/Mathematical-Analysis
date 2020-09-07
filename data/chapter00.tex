@@ -1,0 +1,55 @@
+\chapter{常用不等式}
+\section{Bernoulli不等式}
+\begin{proposition}[Bernoulli不等式]
+    设$h>-1$,$ n \in N^+ $, 则成立 $ (1+h)^n \geq 1 + nh $, 且当 $ n > 1 $时当且仅当 $ h = 0 $时取等号
+\end{proposition}
+\begin{proof}
+    提供两种证明思路：
+    \begin{enumerate}
+        \item 数学归纳法容易证明，在此不详细叙述
+        \item 注意到有公式
+        \begin{equation*}
+            a^n - b^n = (a-b)(a^{n-1} + a^{n-2}b + \cdots + b^{n-1})
+        \end{equation*}
+        成立.对原不等式作变形、因式分解，再对 $ h $分类讨论容易证明
+    \end{enumerate}
+\end{proof}
+
+\begin{proposition}[推广]
+    设 $ a_i > -1(i = 1, \cdots, n) $且同号，则成立
+    \begin{equation*}
+        \prod_{i=1}^{n}(1+a_i) \geq 1 + \sum_{i=1}^{n}a_i
+    \end{equation*}
+    当且仅当 $ a_1 = a_2 = \cdots = a_n = 0 $时取等号
+\end{proposition}
+\begin{proof}
+    提供两种证明思路：
+    \begin{enumerate}
+        \item 数学归纳法是容易证明的
+        \item 直接对原不等式左边进行展开有：
+        \begin{equation*}
+            \begin{split}
+                \prod_{i=1}^{n}(1+a_i) 
+                &= 1 + \sum_{i=1}^{n}a_i + \sum_{i_1 i_2}^{}a_{i_1 i_2} + \cdots + \sum_{i_1 \cdots i_n}^{}a_{i_1} \cdots a_{i_n}   \\
+                &= 1 + \sum_{i=1}^{n}a_i + \sum_{k=2}^{n}\sum_{i_1 \cdots i_k}^{}a_{i_1} \cdots a_{i_k}\text{（其中$i_1 \cdots i_k$是$1,2,\cdots,n$的一个$n$元有序排列）}\\
+                &\geq \text{右边}
+            \end{split}
+        \end{equation*}
+    \end{enumerate}
+\end{proof}
+
+为了方便应用，引出Bernoulli不等式的\emph{双参数形式}
+\begin{proposition}[Bernoulli不等式的\emph{双参数形式}]
+    设 $ A > 0 $, $ A + B > 0 $,则 $ 1 + \frac{B}{A} > 0$, 应用Bernolli不等式有：
+    \begin{equation*}
+        \left( 1 + \frac{B}{A} \right)^n \geq 1 + n \cdot \frac{B}{A}
+    \end{equation*}
+    化简得双参数形式的Bernoulli不等式：
+    \begin{equation*}
+        (A + B)^n \geq A^n + nA^{n-1}B
+    \end{equation*}
+    易知当且仅当$\frac{B}{A} = 0$即$B = 0$时取等号
+\end{proposition}
+
+\section{Cauchy-Schwarz不等式与三角不等式}
+\subsection*{Cauchy-Schwarz不等式}

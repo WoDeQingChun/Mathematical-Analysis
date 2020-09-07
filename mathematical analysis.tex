@@ -1,0 +1,33 @@
+\documentclass[12pt,UTF8,a4paper,oneside]{ctexbook}
+
+\usepackage[top=2.54cm,bottom=2.54cm,left=2cm,right=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}                                 % 用于加粗强调公式中的字体
+\usepackage{exscale}
+\usepackage{relsize}
+\usepackage{extarrows}                          % 用于可在其上下作标注的自适应长度等号
+
+\newtheorem{theorem}{定理}[section]
+\newtheorem{proposition}{命题}[section]
+\newtheorem{proof}{证明}
+\newtheorem{definition}{定义}[section]
+\newtheorem{example}{例}
+\newtheorem{corollary}{推论}%[section]
+\newtheorem{remark}{注}
+\newtheorem{property}{性质}
+
+\author{王丹阳}
+\title{数学分析笔记}
+\date{2020/9/6}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\input{data/chapter00.tex}
+\input{data/chapter01.tex}
+\input{data/chapter02.tex}
+
+
+
+\end{document}
