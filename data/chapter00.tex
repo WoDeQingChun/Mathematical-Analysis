@@ -53,3 +53,20 @@
 
 \section{Cauchy-Schwarz不等式与三角不等式}
 \subsection*{Cauchy-Schwarz不等式}
+\begin{proposition}
+    Cauchy-Schwarz不等式有多种形式，在此先弄懂在欧氏空间$R^n$中的形式。它的几何含义是：$\forall a, b \in R^n$,都有$|a \cdot b| \leq |a||b|$.
+    若设$a = (a_1, \cdots, a_n)$, $b = (b_1, \cdots, b_n)$,则有：
+    \begin{equation*}
+        \left| \sum_{i=1}^{n}a_ib_i \right| \leq \sqrt{\sum_{i=1}^{n}a_{i}^{2}} \sqrt{\sum_{i=1}^{n}b_{i}^{2}}
+    \end{equation*}
+\end{proposition}
+
+这个不等式的证明有点神来之笔的意思，暂且看懂就好
+\begin{proof}
+    引入变量$\lambda$,注意到：
+    \begin{equation*}
+        0 \leq \sum_{i=1}^{n}(\lambda a_i - b_i)^2  = \lambda^2 \sum_{i=1}^{n}a_i^2 - 2\lambda \sum_{i=1}^{n}a_i b_i 
+        + \sum_{i=1}^{n}b_i^2
+    \end{equation*}
+    这是一个关于变量$\lambda$的一元二次不等式，根据其根的判别式可直接得到待证不等式。
+\end{proof}
