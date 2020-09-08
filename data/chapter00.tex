@@ -70,3 +70,80 @@
     \end{equation*}
     这是一个关于变量$\lambda$的一元二次不等式，根据其根的判别式可直接得到待证不等式。
 \end{proof}
+
+\subsection*{三角不等式}
+这个不等式不仅在实数范围内成立，在复数范围和欧式空间中也成立。在欧式空间中两个不等号的含义分别是：
+\begin{itemize}
+    \item 三角形两边之差小于第三边
+    \item 三角形两边之和大于第三边
+\end{itemize}
+\begin{equation*}
+    | |a|-|b| | \leq |a-b| \leq |a| + |b|
+\end{equation*}
+在复数范围和欧式空间中的证明都只要借助Cauchy-Schwarz不等式即可
+
+\section{均值不等式}
+设$a_i > 0\quad (i = 0, 1, \cdots, n)$,则有算数平均值不小于几何平均值不小于调和平均值，即：
+\begin{equation*}
+    \frac{1}{n}\sum_{i=1}^{n}a_i \geq \sqrt[n]{ \prod_{i=1}^{n}a_i } \geq \frac{1}{\frac{1}{n}\sum_{i=1}^{n}\frac{1}{a_1}}
+\end{equation*}
+证明思路如下：
+\begin{itemize}
+    \item 第二个不等式可由第一个不等式证明
+    \item 第一个不等式由Cauchy向前向后证明法证明
+\end{itemize}
+
+\section{排序不等式}
+设有两个有序实数组：$ a_1 \leq \cdots \leq a_n $, $ b_1 \leq \cdots \leq b_n $, $ c_1, \cdots,  c_n $是
+$ b_1, \cdots,  b_n $的任一排列，则有
+\begin{equation*}
+    \text{顺序和} \geq \text{乱序和} \geq \text{逆序和}
+\end{equation*}
+其中：
+\begin{itemize}
+    \item 顺序和：$ \sum_{i=1}^{n}a_i b_i $
+    \item 乱序和：$ \sum_{i=1}^{n}a_i c_i $
+    \item 逆序和：$ \sum_{i=1}^{n}a_i b_{n+1-i} $
+\end{itemize}
+\begin{remark}
+    这是一种贪心的算法思想：要使结果最大，每一步都选出两个序列中最大的数相乘
+\end{remark}
+\begin{proof}
+    TODO：结论显然，证明以后有时间再添加
+\end{proof}
+
+\section{重要的三角不等式}
+
+这个不等式是重要极限的基础
+\begin{proposition}
+    若 $ 0 < x < \frac{\pi}{2} $, 则 $ sin\,x < x < tan \, x $
+\end{proposition}
+\begin{proof}
+    证明要点：
+    \begin{itemize}
+        \item 直角三角形的直角边小于斜边
+        \item 单位圆面积法
+    \end{itemize}
+\end{proof}
+\section{$n!$的估计}
+
+$n!$的常见估计很有用，在此先介绍几个简单的估计方式：
+
+\begin{proposition}
+    $n > 1$时，有:
+    \begin{equation*}
+        n! < \left( \frac{n+1}{2} \right)^n    
+    \end{equation*}
+    这由算数-几何均值不等式可立即得到
+\end{proposition}
+
+更精确的上界的估计：
+注意到：
+\begin{equation*}
+    (n!)^2 = (n \cdot 1)((n-1)\cdot 2) \cdots (1 \cdot n)
+\end{equation*}
+对上述等式右边的$n$项应用算数-几何均值不等式容易得到：
+\begin{equation*}
+    n! < \left( \frac{n+2}{\sqrt{6}} \right)^n
+\end{equation*}
+后面还会介绍Wallis公式和Stirling公式来估计$n!$
